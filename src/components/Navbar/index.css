@@ -1,0 +1,48 @@
+.navbar {
+    z-index: 12;
+    background-color: #be5151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    border-radius: 40px;
+    margin-top: -40px;
+    padding: 5px;
+    gap: 10px;
+}
+
+.pheromon-menu {
+    transition: .5s;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: absolute;
+    height: 22vh;
+    width: 5.5vw;
+    margin-bottom: 32.7vh;
+    margin-right: 9.8vw;
+    background-color: #be5151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pheromon-option {
+    transition: .5s;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 40px;
+    border: 5px solid #de8181;
+}
+
+.pheromon-option:hover {
+    transition: .5s;
+    transform: scale(1.15);
+}
+
+.pheromon-option-active {
+    transition: .5s;
+    transform: scale(1.15);
+}

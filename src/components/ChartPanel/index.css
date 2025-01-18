@@ -1,0 +1,5 @@
+.chart-panels-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

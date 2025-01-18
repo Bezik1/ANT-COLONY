@@ -1,0 +1,120 @@
+.anthills-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 80%;
+    overflow-y: scroll;
+    color: #fa8f8f;
+}
+
+.anthill-showed {
+    transition: .5s;
+    width: 25%;
+    height: 150px;
+    padding: 10px;
+    border: 1px dashed #fa8f8f;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.anthill-expanded {
+    position: absolute;
+    background-color: #be5151;
+    border: none;
+    width: 50%;
+    height: 60%;
+    margin-bottom: 20px;
+}
+
+.anthill-show-ants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.anthill-btn {
+    cursor: pointer;
+    transition: .5s;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px dashed #fa8f8f;
+}
+
+.ant-btns {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.anthill-btn:hover {
+    transition: .5s;
+    color: #fff;
+    transform: translateY(-2.5px);
+    border-color: #fff;
+}
+
+.anthill-showed .property {
+    font-size: 0.8em;
+}
+
+.anthill-showed header {
+    font-size: 2em;
+}
+
+.anthill-expanded header {
+    font-size: 4em;
+}
+
+.anthill-showed:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.anthill-expanded:hover {
+    cursor: default;
+    color: #fa8f8f;
+}
+
+.anthill-showed-closed-btn {
+    cursor: pointer;
+    transition: .5s;
+    top: 2.5vh;
+    right: 1.5vw;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.anthill-showed-closed-btn:hover {
+    transition: .5s;
+    color: #fff;
+    transform: translateY(-2.5px);
+}
+
+.remove-btn:hover {
+    transition: .5s;
+    color: red;
+    border-style: solid;
+    border-color: red;
+    background-color: #3b0c0c;
+    text-decoration: line-through;
+    transform: translateY(0);
+}
+
+.connect-btn:hover {
+    transition: .5s;
+    color: #9494fe;
+    border-color: 9494fe;
+    background-color: #3e3782;
+    transform: translateY(0);
+}
