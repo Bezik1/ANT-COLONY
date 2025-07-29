@@ -1,10 +1,11 @@
 import axios from "axios";
 import { Cell } from "../types/Cells/Cell";
 import { createCellInstance } from "./createCellIInstance";
+import { BASE_API_URL } from "../const/Anthill";
 
 export const getAnthill = async (id: string): Promise<(Cell | null)[][][]> => {
     try {
-        const res = await axios.get<(Cell | null)[][][]>(`http://localhost:8080/colony/${id}/grid`);
+        const res = await axios.get<(Cell | null)[][][]>(`${BASE_API_URL}/colony/${id}/grid`);
 
         if (res.status !== 200 || !res.data) {
             throw new Error(`Operation Failed: ${res.statusText}`);
