@@ -6,6 +6,8 @@ This project is a **web-based ant colony simulation** built with **React**, **Ty
 
 Ants operate in a dynamically generated terrain where they autonomously navigate, communicate through pheromones, and adapt based on their environment. The application is fully interactive and offers real-time visual feedback of the ants' behavior.
 
+⚠️ **Warning:** In current state backend is on render platform, where the server needs to warm up, before actually working so don't be scae if you need to wait some time for seeing main scene.
+
 ![Banner](./public/assets/photos/App.png)
 
 ---
