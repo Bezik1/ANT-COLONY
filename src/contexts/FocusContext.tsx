@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { ParentProps } from "../types/ParentProps";
 
 const FocusContext = createContext<{ target: number, setTarget: React.Dispatch<React.SetStateAction<number>> | undefined}>({

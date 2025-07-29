@@ -43,7 +43,7 @@ const Console = () =>{
                 </div>
                 <div className={`camera-container ${showCameras && "camera-container-expanded"}`}>
                 {showCameras && <div className="cameras">
-                    {currentAnts.map(({ position }, index) =>(
+                    {currentAnts.map((_, index) =>(
                         <div className="cameras-canvas-container" onClick={() => {setTarget(index); setShowCameras(false)}}>
                             <h1 className="camera-ant-header">Ant {index}</h1>
                             <Area3D cameraTarget={index} className="canvas-camera" width={250*4/currentAnts.length} height={250*4/currentAnts.length} />

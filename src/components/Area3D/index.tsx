@@ -2,11 +2,10 @@ import { Canvas } from "@react-three/fiber"
 import "./index.css"
 import { generateAnthill } from "../../utils/generateAnthill"
 import { OrbitControls } from "@react-three/drei"
-import { Color, Vector3 } from "three"
+import { Vector3 } from "three"
 import Ant3D from "../Ant3D"
 import { useAnthill } from "../../contexts/AnthillContext"
 import { useEffect, useState } from "react"
-import { ANTHILL_ID } from "../../const/Anthill"
 import { getAnthill } from "../../utils/getAnthill"
 import { getAnthillAnts } from "../../utils/getAnthillAnts"
 import { Position } from "../../types/Position"
@@ -15,10 +14,10 @@ import { useSimulation } from "../../contexts/AnthillSimulationContext"
 import { useFocus } from "../../contexts/FocusContext"
 import { useAnthillId } from "../../contexts/AnthillIdContext"
 
-const Area3D = ({ cameraTarget, className, width=window.innerWidth * 0.65, height=window.innerHeight * 0.75 } : { cameraTarget?: number, className?: string, width?: number, height?: number }) =>{
+const Area3D = ({ cameraTarget, className, width=window.innerWidth * 0.65, height=window.innerHeight * 0.54 } : { cameraTarget?: number, className?: string, width?: number, height?: number }) =>{
     const {id: anthillId} = useAnthillId()
     const { target } = useFocus()
-    const [colonyPosition, setColonyPosition] = useState<Position>();
+    const [_, setColonyPosition] = useState<Position>();
     const { ants, grid, setAnts, setGrid } = useAnthill()
     const { ants: simulatedAnts } = useSimulation()
 

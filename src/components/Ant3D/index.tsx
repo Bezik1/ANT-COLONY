@@ -1,27 +1,16 @@
 import { useFrame, useLoader, useThree } from "@react-three/fiber";
 import "./index.css";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { Group, PerspectiveCamera, Vector3 } from "three";
+import { Group, Vector3 } from "three";
 import { Y_OFFSET } from "../../const/Ants";
 import { Ant } from "../../types/Ant";
 import { useEffect, useRef } from "react";
-import { useAnthill } from "../../contexts/AnthillContext";
 import { useFocus } from "../../contexts/FocusContext";
 
-const Ant3D = ({ position, hasFood, lastPosition, simulated, index, cameraTarget }: { position: Vector3, hasFood: boolean, lastPosition: Vector3, simulated: Ant, index: number, cameraTarget?: number }) => {
+const Ant3D = ({ position, simulated, index, cameraTarget }: { position: Vector3, hasFood: boolean, lastPosition: Vector3, simulated: Ant, index: number, cameraTarget?: number }) => {
     const { target } = useFocus()
-    const { grid } = useAnthill();
     const { camera } = useThree();
     const currentPosition = useRef(position);
-
-    const moves = [
-        [0, 0, 1],
-        [0, 0, -1],
-        [1, 0, 0],
-        [0, 1, 0],
-        [0, -1, 0],
-        [-1, 0, 0],
-    ];
 
     const antRef = useRef<Group>(null!);
 
@@ -30,7 +19,7 @@ const Ant3D = ({ position, hasFood, lastPosition, simulated, index, cameraTarget
 
     const speed = 1;
 
-    useFrame((state, delta) => {
+    useFrame((_, delta) => {
         if (target === index || cameraTarget === index) {
             const offsetCameraPosition = currentPosition.current.clone().add(new Vector3(0, 0.5, 0.35));
             camera.position.copy(offsetCameraPosition);

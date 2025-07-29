@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useAnthill } from "../../contexts/AnthillContext"
 import "./index.css"
-import { CartesianGrid, Area, AreaChart, XAxis, YAxis, Tooltip } from "recharts"
+import { CartesianGrid, Area, AreaChart, YAxis, Tooltip } from "recharts"
 import { Cell } from "../../types/Cells/Cell"
 import { AirCell } from "../../types/Cells/AirCell"
 
