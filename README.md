@@ -1,6 +1,6 @@
 # 🐜 Ant Colony Simulation
 
-## Application
+## 💻 Application
 
 This project is a **web-based ant colony simulation** built with **React**, **TypeScript**, and **@react-three/fiber** for 3D rendering. The goal of the simulation is to mimic how ants explore their environment, discover food, and carry it back to the anthill using pheromone trails.
 
@@ -10,7 +10,7 @@ Ants operate in a dynamically generated terrain where they autonomously navigate
 
 ---
 
-## Pheromones
+## 🧪 Pheromones
 
 Ants rely on two main types of pheromones to navigate:
 
@@ -30,7 +30,7 @@ You can visualize **pheromone concentrations live** during the simulation and ex
 
 ---
 
-## Terrain
+## 🪨 Terrain
 
 The terrain is procedurally generated using **Perlin noise**, simulating a **cave-like structure** within a cubic grid. Each cell is classified as either walkable or blocked, affecting how ants move through the environment.
 
@@ -48,7 +48,7 @@ using the **bottom menu** options.
 
 ---
 
-## Database
+## 📡 Database
 
 The simulation is backed by a **custom-built database**. Every step in the simulation is reflected in database updates:
 
@@ -61,16 +61,32 @@ This ensures persistent, queryable state and allows for **deeper analysis and vi
 
 ![Banner](./public/assets/photos/Anthill_Menu.png)
 
-## 🧠 Tech Stack
+## ⚙️ Command Tools
 
+To work with this project locally or in a containerized environment, use the following commands:
+
+```bash
+# 🔧 Build the application
+npm run build
+
+# 🚀 Run the development server
+npm run dev
+
+# 🐳 Run with Docker (frontend + backend)
+docker-compose up
+```
+
+
+## 🧠 Tech Stack
+- **@react-three/fiber** for 3D rendering
+- **Custom Terrain Generation** with Perlin Noise
+- **Ant Colony Algorithm**
+
+<br/>
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=git,docker,js,ts,react,css,html" />
   </a>
 </p>
-
-- **@react-three/fiber** for 3D rendering
-- **Custom Terrain Generation** with Perlin Noise
-- **Ant Colony Algorithm**
 
 ---
